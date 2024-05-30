@@ -1,0 +1,4 @@
+Bundle-Name: publications
+Bundle-SymbolicName: publications
+Bundle-Version: 1.0.0
+Export-Package: publications.constants

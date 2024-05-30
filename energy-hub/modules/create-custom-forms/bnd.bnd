@@ -1,0 +1,4 @@
+Bundle-Name: create-custom-forms
+Bundle-SymbolicName: create.custom.forms
+Bundle-Version: 1.0.0
+Export-Package: create.custom.forms.constants

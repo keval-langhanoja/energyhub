@@ -1,0 +1,4 @@
+Bundle-Name: create-account
+Bundle-SymbolicName: create.account
+Bundle-Version: 1.0.0
+Export-Package: create.account.constants

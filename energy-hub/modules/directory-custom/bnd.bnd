@@ -1,0 +1,4 @@
+Bundle-Name: directory-custom
+Bundle-SymbolicName: directory.custom
+Bundle-Version: 1.0.0
+Export-Package: directory.custom.constants

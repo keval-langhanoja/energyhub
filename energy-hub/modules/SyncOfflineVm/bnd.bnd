@@ -1,0 +1,4 @@
+Bundle-Name: SyncOfflineVm
+Bundle-SymbolicName: SyncOfflineVm
+Bundle-Version: 1.0.0
+Export-Package: SyncOfflineVm.constants

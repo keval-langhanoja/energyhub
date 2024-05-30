@@ -1,0 +1,4 @@
+Bundle-Name: manage-user-projects
+Bundle-SymbolicName: manage.user.projects
+Bundle-Version: 1.0.0
+Export-Package: manage.user.projects.constants

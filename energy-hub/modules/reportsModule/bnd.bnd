@@ -1,0 +1,4 @@
+Bundle-Name: reportsModule
+Bundle-SymbolicName: reportsModule
+Bundle-Version: 1.0.0
+Export-Package: reportsModule.constants

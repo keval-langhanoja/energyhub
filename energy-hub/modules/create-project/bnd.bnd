@@ -1,0 +1,4 @@
+Bundle-Name: create-project
+Bundle-SymbolicName: create.project
+Bundle-Version: 1.0.0
+Export-Package: create.project.constants

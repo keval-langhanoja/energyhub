@@ -1,0 +1,4 @@
+Bundle-Name: see-all-projects
+Bundle-SymbolicName: see.all.projects
+Bundle-Version: 1.0.0
+Export-Package: see.all.projects.constants

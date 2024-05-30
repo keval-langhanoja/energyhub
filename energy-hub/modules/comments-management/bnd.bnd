@@ -1,0 +1,4 @@
+Bundle-Name: comments-management
+Bundle-SymbolicName: comments.management
+Bundle-Version: 1.0.0
+Export-Package: comments.management.constants

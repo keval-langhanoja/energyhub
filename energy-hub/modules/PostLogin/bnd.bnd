@@ -1,0 +1,4 @@
+Bundle-Activator: PostLogin.PostLoginActivator
+Bundle-Name: PostLogin
+Bundle-SymbolicName: PostLogin
+Bundle-Version: 1.0.0

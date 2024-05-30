@@ -1,0 +1,4 @@
+Bundle-Name: community
+Bundle-SymbolicName: community
+Bundle-Version: 1.0.0
+Export-Package: community.constants
