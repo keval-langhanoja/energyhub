@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="14" viewBox="0 0 7 14">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="14" y="5" width="7" height="14" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1847" data-name="Group 1847" transform="translate(-1012.807 -484.719)">
+    <g id="Scroll_Group_1" data-name="Scroll Group 1" transform="translate(998.807 479.719)" clip-path="url(#clip-path)" style="isolation: isolate">
+      <text id="_" data-name="*" fill="#ff0f0f" font-size="15" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="14.119" y="16">*</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,125 @@
+/*join*/
+.net, .dots{
+    -webkit-animation: rotation 450s infinite linear;
+}
+@-webkit-keyframes rotation {
+from {
+    -webkit-transform: rotate(0deg);
+}
+to {
+    -webkit-transform: rotate(359deg);
+}
+}
+/*about*/
+.about .bg, .about .imgBorder{
+animation: animName 120s linear infinite;
+}
+
+@keyframes animName {
+0%{
+    transform: rotatey(0deg);
+    }
+100%{
+    transform: rotatey(360deg);
+    }
+}
+.about .MainImage{
+animation: flipImage 40s linear infinite;
+}
+
+@keyframes flipImage {
+0%{
+    transform: rotateX(0deg);
+    }
+50%{
+    transform: rotateX(-45deg);
+    }
+}
+
+/*dots*/ 
+.animatedDots{
+    display: block;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+}
+.animatedDots.blue{
+    fill: #23B6D0;  
+    bottom: 30%; 
+    right: 0; 
+}
+.animatedDots.orange{
+    fill: #FEC725;
+    bottom: 5%; 
+    right: 20%; 
+    width: 65px;
+    height: 65px;
+}
+.animatedDots.green{
+    fill: #2B7630;
+    bottom: 0; 
+    right: 40%; 
+    width: 85px;
+    height: 85px;
+}
+.send .animatedDots:lang(ar),
+.program .animatedDots:lang(ar){
+    right: auto !important;
+}
+.program .animatedDots.orange.sec:lang(ar),
+.program .animatedDots.green:lang(ar){
+    left: 6% !important;
+}
+.program .animatedDots.orange:lang(ar){
+    left: 25% !important;
+}
+.program .animatedDots.blue:lang(ar){
+    left: 8% !important;
+}
+.program .animatedDots.green2:lang(ar){
+    left: 0 !important;
+}
+.program .animatedDots.blue.sec:lang(ar){
+    left: 20% !important; 
+}
+.send .animatedDots.green:lang(ar){
+    left: 40% !important;
+}
+.send .animatedDots.orange:lang(ar){
+    left: 20% !important;
+}
+.send .animatedDots.blue:lang(ar){
+    left: 0 !important;
+}
+/*bottom border*/
+.inputContainer{
+    display: inline-block;
+}
+.inputContainer::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #009BC7;
+    transition: width .3s;
+}
+.inputContainer:focus-within::after {
+    width: 100%;
+}
+
+
+/*card border*/
+.topBorder:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #009BC7;
+    transition: width 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fillBorder:before{
+    width: 100%;
+}

@@ -1,0 +1,366 @@
+.greenBorder {
+    position: absolute;
+    top:0;
+    border-left: 6px solid #8AAF29;
+    display: inline;
+    margin-left: -15px;
+    margin-right: 8px;
+}
+
+.industryContent h1 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    color: #000000;
+    text-transform: uppercase;
+}
+.institutionText .p1{
+    position: relative;
+    font:normal normal bold 24px/35px Helvetica;
+    letter-spacing: 0.72px;
+    color: #333333;
+}
+
+.institutionText .p2{
+    position: relative;
+    font: normal normal normal 22px/35px Helvetica;
+    letter-spacing: 0.66px;
+    color: #333333;
+}
+
+/* .aboutUsImage{ */
+/*     width: auto !important; */
+/*     height: auto !important; */
+/* } */
+
+.slider{
+    background: transparent;
+    border: 0;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #009BC7;
+    text-transform: uppercase;
+}
+
+.slider img {
+    transform: rotate(90deg);
+}
+
+.steps{
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 11px;
+    width: 361px;
+    height: 250px;
+    position: relative;
+    background-color: #fff;
+}
+
+.stepNumber{
+    background: #009BC7 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    font-size: 20px;
+    letter-spacing: 1.36px;
+    color: #FFFFFF;
+    font-weight: bold;
+    width: 45px;
+    height: 46px;
+    text-align: center;
+    position: absolute;
+    top: -23px;
+    left: 30px;
+    padding: 5px;
+}
+
+.step1{
+    top: 50px;
+    left: 0;
+    padding: 45px 29px 13px 31px;
+    z-index: 1;
+}
+
+.step2{
+    top: 50px;
+    left: 140px;
+    padding: 40px 29px 13px 31px;
+    z-index: 1;
+}
+
+.step3{
+    top: 95px;
+    left: 279px;
+    padding: 45px 29px 13px 31px;
+    z-index: 1;
+}
+
+.userTypeCard {
+    padding-bottom: 10rem !important;
+}
+
+.text1{
+    font: normal normal normal 18px/21px Helvetica;
+    letter-spacing: 0px;
+    color: #000000;
+}
+.text2{
+    font: normal normal normal 16px/21px Helvetica;
+    letter-spacing: 0px;
+    color: #707070;
+    width: 300px;
+}
+
+.step1Button{
+    font: normal normal normal 14px/16px Helvetica;
+    letter-spacing: 0px;
+    color: #000000;
+}
+/* .blueBtn{ */
+/*     font: normal normal normal 10px/23px Helvetica; */
+/*     letter-spacing: 0.68px; */
+/*     color: #FFFFFF; */
+/*     width: 120px; */
+/*     height: 35px; */
+/* } */
+
+.createLinkedinAccount{
+    width: 216px;
+}
+
+.linkedin{
+    width: 191px;
+    height: 46px;
+}
+
+.curve1{
+    position: absolute;
+    left: 575px;
+    width: auto;
+    height: auto;
+}
+
+.curve2{
+    position: absolute;
+    left: 890px;
+    top: 820px;
+    width: auto;
+    height: auto;
+}
+
+@media screen and (max-width: 1290px) {
+    .step2 {
+        top: 227px;
+        left: 45px;
+    }
+
+    .step3 {
+        top: 203px;
+        left: -15px;
+    }
+
+    .userTypeCard {
+        padding-bottom: 18rem !important;
+    }
+
+    .curve1{
+        left: 370px;
+        top: 660px;
+    }
+
+    .curve2{
+        left: 600px;
+        top: 960px;
+    }
+}
+
+
+@media screen and (max-width: 1199px) {
+    .curve1{
+        left: 420px;
+        top: 979px;
+        transform: rotate(45deg);
+    }
+
+    .curve2{
+        top: 1240px;
+    }
+}
+
+
+
+@media screen and (max-width: 1165px) {
+    .step2 {
+        top: 114px;
+        left: 205px;
+    }
+
+    .step3 {
+        top: 174px;
+        left: -15px;
+    }
+
+    .curve1{
+        left: 233px;
+        top: 979px;
+        transform: rotate(45deg);
+    }
+
+    .curve2{
+        top: 1390px;
+    }
+
+}
+
+
+@media screen and (max-width: 960px) {
+    .step2 {
+        top: 114px;
+        left: 42px;
+    }
+
+    .curve1{
+        left: 158px;
+        top: 1003px;
+        transform: rotate(100deg);
+    }
+
+    .curve2{
+        top: 1323px;
+        left: 240px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .step2 {
+        top: 114px;
+        left: 42px;
+    }
+
+    .curve1{
+        left: 158px;
+        top: 1085px;
+        transform: rotate(100deg);
+    }
+
+    .curve2{
+        top: 1400px;
+        left: 240px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .step3{
+        left:0;
+    }
+
+    .curve1 {
+        left: 99px;
+        top: 956px;
+        transform: rotate(100deg);
+    }
+
+    .curve2{
+        top: 1291px;
+        left: 1px;
+    }
+}
+
+@media screen and (max-width: 581px) {
+    .curve1 {
+        left: 99px;
+        top: 1006px;
+        transform: rotate(100deg);
+    }
+
+    .curve2{
+        top: 1360px;
+        left: 1px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .aboutUsImage{
+        width: 100% !important;
+        height: auto !important;
+    }
+    .institutionText .p2{
+        font: normal normal normal 20px/31px Helvetica;
+    }
+    .institutionText .p2{
+        font: normal normal normal 18px/31px Helvetica;
+    }
+
+    .blueBtn{
+        font: normal normal normal 10px/23px Helvetica !important;
+    }
+
+    .createLinkedinAccount{
+        width: 216px !important;
+    }
+
+    .step2 {
+        top: 114px;
+        left: 0px;
+    }
+
+    .step3 {
+        top: 174px;
+        left: 0px;
+    }
+
+    .curve1 {
+        left: 12px;
+        top: 1078px;
+        transform: rotate(100deg);
+    }
+
+    .curve2{
+        top: 1469px;
+        left: 91px;
+    }
+
+}
+
+@media screen and (max-width: 380px) {
+    .linkedin{
+        width: 100%;
+        height: auto;
+    }
+    .ehpLogo{
+        width: 100%;
+        height: auto;
+    }
+    .text1 {
+        font: normal normal normal 14px/17px Helvetica;
+    }
+
+    .text2 {
+        font: normal normal normal 13px/17px Helvetica;
+        width: auto;
+    }
+
+    .createLinkedinAccount{
+        width: 190px !important;
+    }
+
+    .step1Button{
+        margin-top: 12px !important;
+        font: normal normal normal 12px/14px Helvetica;
+    }
+    
+    .curve1{
+        
+    }
+    .curve2{
+        
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .curve1{
+        
+    }
+    .curve2{
+        top: 1434px;
+        left: 14px;
+    }
+}

@@ -1,0 +1,49 @@
+
+.tick {
+    width: 35px;
+    height: 35px;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+
+.notification{
+    font-size: 18px;
+    font-weight: 400;
+    color: #848484;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.readmore{
+    margin-right: 20px;
+    font-weight: 500;
+    color: #009BC7 !important;
+    text-decoration: underline !important;
+    letter-spacing: normal;
+    font-size: 16px;
+}
+
+.card{
+    border: 1px solid #FEC725;
+    width: auto;
+}
+
+.go{
+    color:#23B6D0;
+    margin:0 30px 0 30px;
+}
+a.right{
+    float: right;
+}
+
+.go:hover{
+    color:#43D2F4;
+}
+.go:hover img{
+    background: transparent url(../images/go-hover.png) no-repeat;
+}
+
+.arrow{
+    margin-left: 5px;
+}

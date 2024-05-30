@@ -1,0 +1,445 @@
+.page-link{
+    border: 0;
+    color: #989898;
+    font-weight: bold;
+}
+
+.leftArrow{
+    color: #43D2F4; 
+    border: 1px solid #43D2F4;
+    border-radius: 50% !important;
+    padding: 0 12px 0 12px;
+    margin-right: 2px;
+    background: transparent;
+}
+.leftArrow::after{
+    content: "\2191";
+    display: block;
+    color: #43D2F4;
+    font-weight: bold;
+    font-size: 27px;
+    text-align: center;
+    transform: rotate(-90deg);
+    margin-right: 3px;
+}
+.rightArrow{
+    color: #43D2F4; 
+    border: 1px solid #43D2F4;
+    border-radius: 50% !important;
+    padding: 0 12px 0 12px;
+    background: transparent;
+}
+.rightArrow::after{
+    content: "\2191";
+    display: block;
+    color: #43D2F4;
+    font-weight: bold;
+    font-size: 27px;
+    text-align: center;
+    transform: rotate(90deg);
+    margin-left: 3px;
+}
+
+.inactive{
+    color:#C9E9F7 !important;
+    border: 1px solid #C9E9F7 !important;
+    border-radius: 50% !important;
+}
+.inactive::after{
+    color:#C9E9F7 !important;
+}
+a.plink{
+    margin-top: 5px;
+    background: transparent;
+}
+.activepage{
+    color: #43D2F4;
+}
+
+.signup .bgImage {
+    height: calc(100vh - 76px);
+    background-image: url(../images/topBg.png);
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+}
+
+.modal-button{
+    background: transparent;
+    border: 0;
+    color: #989898;
+    height: 52px;
+    width: 80px;
+}
+.modal-button:focus  {  
+    color:#208fff ;
+}
+.modal-button span{
+    background: url(assests/images/filter-gray.svg) no-repeat;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.modal-button:focus span {  
+    background: url(../images/filter-blue.png) no-repeat;
+}
+#btnFilter span{
+    background: url(../images/filter-gray.png) no-repeat;
+    width: 26px;
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: -9px;
+}
+#btnFilter:focus span {
+    background: url(../images/filter-blue.png) no-repeat;
+}
+.menu .active{
+    color: #009BC7 !important;
+}.userTypeCard{
+    top: 77px;
+}
+.tabs{
+    background: white;
+    border-radius: 20px;
+    font-weight: 500;
+}
+.nav-link {
+    padding: 0.8rem 2rem;
+}
+
+.nav-tabs .nav-link{
+    letter-spacing: 0.48px;
+    color: #333333;
+    border: 0;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active ,.nav-tabs .nav-link:hover{
+    color: #009BC7;
+    border-bottom: 3px solid #009BC7;
+}
+ 
+.welcome h1 {
+    font-size: 37px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+
+.rightImage{
+    width: 100%;
+    min-height: 330px;
+    object-fit: cover;
+    position: relative;
+}
+
+.bottomLeftImage{
+    width: 76%;
+    min-height: 250px;
+    object-fit: cover;
+    position: absolute;
+    z-index: 100;
+    top: 5rem;
+}
+.topRightImage{
+    width: 46%;
+    min-height: 150px;
+    object-fit: cover;
+    position: relative;
+    z-index: 100;
+    float: right;
+}
+
+.play{
+    position: absolute;
+    top: 190px;
+}
+
+.play img{
+    width: 40px;
+}
+
+.play a{
+    text-decoration: none;
+    color: #333;
+}
+
+.title1{
+    text-transform: capitalize;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-left: -23px;
+    margin-top: 2rem;
+}
+
+.title2{
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+
+.goTo{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.goTo:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.wrapper {
+    position: relative;
+    border-radius: 25px;
+    width: 27rem;
+}
+
+.wrapper iframe {
+    display: none;
+    border-radius: 0px;
+}
+.tabsRow{
+    position: relative;
+}
+
+.card{
+    box-shadow: 0px 5px 13px 1px rgb(23 84 116 / 18%);
+}
+
+.dropdown-menu-filter:lang(en){
+    min-width:232px;
+    border-radius: 0;
+    margin-top: 10px;
+    padding: 0.75rem;
+    top:auto !important;
+    transform: translate3d(-72%, 47px, 0px) !important;
+    left: auto !important;
+    z-index: 999999;
+}
+
+.dropdown-menu-filter:lang(ar){
+    min-width:232px;
+    border-radius: 0;
+    margin-top: 10px;
+    padding: 0.75rem;
+    top:auto !important;
+    transform: translate3d(72%, 47px, 0px) !important;
+    left: auto !important;
+    z-index: 999999;
+}
+.divTitle > .title{
+    font-size: 18px;
+    text-transform: unset;
+}
+
+.tbl{
+    width: 100%;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.tbl td{
+    padding:5px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    border: 1px solid #BDBDBD;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #23B6D0;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 7px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.reset{
+    width: 120px;
+    height: 40px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 25px;
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+    background: #FFF;
+    border: 1px solid #009BC7;
+    color: #009BC7;
+    transition: background 1s;
+}
+
+.blueBtn {
+    width: 120px;
+    height: 40px;
+}
+
+    
+.detailsDiv{
+    top: 75px;
+}
+@media screen and (max-width: 1200px) {
+    .title1{
+        font-size: 14px;
+        margin-top: 0rem;
+    }
+    .welcome h1{
+        font-size: 30px;
+    }
+    .title2{
+        font-size: 14px;
+    }
+    .showMoreButton{
+        margin-top: 0;
+    }
+    .rightImage{
+        min-height: 290px;
+    }
+    .play{
+        top: 155px;
+    }
+    .signup .bgImage{
+        height: 95vh;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .MainTitle{
+        font-size: 28px;
+    }
+    .yellowBorder{
+        height: 28px;
+    }
+    .mainDetails{
+        font-size: 16px;
+    }
+    .welcome h1{
+        font-size: 28px;
+        margin-top: 0;
+    }
+    .signup .content, .userType .content{
+        padding-bottom: 0 !important;
+    }
+    .signup .bgImage{
+        height: 96vh;
+    }
+}
+@media screen and (max-width: 992px) {
+    .signup .bgImage{
+        height: 135vh;
+    }
+    .detailsSection{
+        margin-top: 5rem;
+    }
+}
+@media screen and (max-width: 869px) {
+    .signup .bgImage{
+        height: 143vh;
+    }
+}
+@media screen and (max-width: 390px) {
+   	.dropdown-menu-filter:lang(en){ 
+	    transform: translate3d(-64%, 30px, 0px) !important; 
+	}
+	.dropdown-menu-filter:lang(ar){
+	    transform: translate3d(64%, 30px, 0px) !important;
+	}
+}
+@media screen and (max-width: 820px) {
+	.dropdown-menu-filter:lang(en){ 
+	    transform: translate3d(-64%, 30px, 0px) !important; 
+	}
+	.dropdown-menu-filter:lang(ar){
+	    transform: translate3d(64%, 30px, 0px) !important;
+	}
+	
+ 	.seeAllFilter.dropdown-menu-filter:lang(en){ 
+	    transform: translate3d(-20%, 30px, 0px) !important; 
+	}
+	 .seeAllFilter.dropdown-menu-filter:lang(ar){ 
+	    transform: translate3d(20%, 30px, 0px) !important; 
+	}
+}
+.dropdown-menu-filter:lang(ar),
+.dropdown-menu-filter:lang(en) {
+	min-width: max-content !important;
+}
+@media screen and (max-width: 480px) { 
+    .signup .bgImage{
+        height: 165vh;
+    }
+    .submit {
+        font-size: 11px !important;
+        width: 125px !important;
+    }
+    .tabs{
+	    display: list-item;
+	}
+	
+	.seeAllFilter.dropdown-menu-filter:lang(en){ 
+	    transform: translate3d(-64%, 30px, 0px) !important; 
+	}
+	 .seeAllFilter.dropdown-menu-filter:lang(ar){ 
+	    transform: translate3d(64%, 30px, 0px) !important; 
+	}
+}
+
+@media screen and (max-width: 470px) { 
+    .signup .bgImage{
+        height: 175vh;
+    }
+}

@@ -1,0 +1,32 @@
+<svg id="_416372_champion_cup_sports_winner_icon" data-name="416372_champion_cup_sports_winner_icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="Handles">
+    <g id="Group_12370" data-name="Group 12370">
+      <path id="Path_19622" data-name="Path 19622" d="M56,4c-7,0-8,6-8,8s0,4,2,4,2-2,2-4a3.663,3.663,0,0,1,4-4,3.663,3.663,0,0,1,4,4c0,10-12,16-18,16H22C16,28,4,22,4,12A3.663,3.663,0,0,1,8,8a3.663,3.663,0,0,1,4,4c0,2,0,4,2,4s2-2,2-4S15,4,8,4a7.887,7.887,0,0,0-8,8C0,24,14,32,22,32H42c8,0,22-8,22-20A7.887,7.887,0,0,0,56,4Z" fill="#e6b85c"/>
+    </g>
+  </g>
+  <g id="Cup">
+    <g id="Group_12371" data-name="Group 12371">
+      <path id="Path_19623" data-name="Path 19623" d="M50,4c0-2,0-4-2-4H16c-2,0-2,2-2,4,0,34,14,30,14,34v4c0,4-6,2-6,6H42c0-4-6-2-6-6V38C36,34,50,38,50,4Z" fill="#fc6"/>
+    </g>
+  </g>
+  <g id="Stand">
+    <g id="Group_12372" data-name="Group 12372">
+      <path id="Path_19624" data-name="Path 19624" d="M50,52H14a2,2,0,0,0-2,2v8a2,2,0,0,0,2,2H50a2,2,0,0,0,2-2V54A2,2,0,0,0,50,52Z" fill="#666"/>
+    </g>
+  </g>
+  <g id="Plate">
+    <g id="Group_12373" data-name="Group 12373">
+      <rect id="Rectangle_3855" data-name="Rectangle 3855" width="20" height="4" transform="translate(22 56)" fill="#e6e6e6"/>
+    </g>
+  </g>
+  <g id="Base_1_">
+    <g id="Group_12374" data-name="Group 12374">
+      <path id="Path_19625" data-name="Path 19625" d="M42,48H22s-6,0-6,4H48C48,48,42,48,42,48ZM28,42h8a2,2,0,0,0,0-4H28a2,2,0,0,0,0,4Z" fill="#e6b85c"/>
+    </g>
+  </g>
+  <g id="_x31_">
+    <g id="Group_12375" data-name="Group 12375">
+      <path id="Path_19626" data-name="Path 19626" d="M36,20H34V6H32a1.988,1.988,0,0,0-1.73,1.015l-3.7,3.7a1.92,1.92,0,1,0,2.715,2.715L30,12.714V20H28a2,2,0,0,0,0,4h8a2,2,0,0,0,0-4Z" fill="#cca352"/>
+    </g>
+  </g>
+</svg>

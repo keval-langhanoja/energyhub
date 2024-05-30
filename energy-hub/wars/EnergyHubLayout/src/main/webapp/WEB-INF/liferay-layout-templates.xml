@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!DOCTYPE layout-templates PUBLIC "-//Liferay//DTD Layout Templates 7.2.0//EN" "http://www.liferay.com/dtd/liferay-layout-templates_7_2_0.dtd">
+
+<layout-templates>
+	<custom>
+		<layout-template id="EnergyHubLayout" name="EnergyHubLayout">
+			<template-path>/EnergyHubLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="oneColumnLayout" name="oneColumnLayout">
+			<template-path>/oneColumnLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="TwoColumnsLayout" name="TwoColumnsLayout">
+			<template-path>/TwoColumnsLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="IndustryLayout" name="IndustryLayout">
+			<template-path>/IndustryLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="seeAllLayout" name="seeAllLayout">
+			<template-path>/seeAllLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="OverviewLayout" name="OverviewLayout">
+			<template-path>/OverviewLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="innovationLayout" name="innovationLayout">
+			<template-path>/innovationLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="successMessage" name="successMessage">
+			<template-path>/successMessage.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="projectDetailLayout" name="projectDetailLayout">
+			<template-path>/projectDetailLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="CommunityLayout" name="CommunityLayout">
+			<template-path>/CommunityLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="myProjectsLayout" name="myProjectsLayout">
+			<template-path>/myProjectsLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template> 
+		<layout-template id="ForBusinessLayout" name="ForBusinessLayout">
+			<template-path>/ForBusinessLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="commercialLayout" name="commercialLayout">
+			<template-path>/commercialLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="educationLayout" name="educationLayout">
+			<template-path>/educationLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="directoryLayout" name="directoryLayout">
+			<template-path>/directoryLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="PvStatusLayout" name="PvStatusLayout">
+			<template-path>/PvStatusLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="directoryInstitutionsLayout" name="directoryInstitutionsLayout">
+			<template-path>/directoryInstitutionsLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="findaJobLayout" name="findaJobLayout">
+			<template-path>/findaJobLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="projectDetailComments" name="projectDetailComments">
+			<template-path>/projectDetailComments.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="NewsLayout" name="NewsLayout">
+			<template-path>/NewsLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="EventsLayout" name="EventsLayout">
+			<template-path>/EventsLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="ReportLayout" name="ReportLayout">
+			<template-path>/ReportLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="MessagingLayout" name="MessagingLayout">
+			<template-path>/MessagingLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="transportationLayout" name="transportationLayout">
+			<template-path>/transportationLayout.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="PrivacyPolicy" name="PrivacyPolicy">
+			<template-path>/PrivacyPolicy.ftl</template-path>
+			<thumbnail-path>/EnergyHubLayout.png</thumbnail-path>
+		</layout-template>
+	</custom>
+</layout-templates>

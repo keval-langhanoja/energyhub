@@ -1,0 +1,345 @@
+
+.page-link{
+    border: 0;
+    color: #989898;
+    font-weight: bold;
+}
+
+.leftArrow{
+    color: #43D2F4; 
+    border: 1px solid #43D2F4;
+    border-radius: 50% !important;
+    padding: 0 12px 0 12px;
+    margin-right: 2px;
+}
+.leftArrow::after{
+    content: "\2191";
+    display: block;
+    color: #43D2F4;
+    font-weight: bold;
+    font-size: 27px;
+    text-align: center;
+    transform: rotate(-90deg);
+    margin-right: 3px;
+}
+
+.rightArrow{
+    color: #43D2F4; 
+    border: 1px solid #43D2F4;
+    border-radius: 50% !important;
+    padding: 0 12px 0 12px;
+}
+.rightArrow::after{
+    content: "\2191";
+    display: block;
+    color: #43D2F4;
+    font-weight: bold;
+    font-size: 27px;
+    text-align: center;
+    transform: rotate(90deg);
+    margin-left: 3px;
+}
+
+.activepage{
+    color: #43D2F4;
+}
+
+.inactive{
+    color:#C9E9F7 !important;
+    border: 1px solid #C9E9F7 !important;
+    border-radius: 50% !important;
+}
+.inactive::after{
+    color:#C9E9F7 !important;
+}
+
+a.plink{
+    margin-top: 5px;
+}
+
+.linkk{
+    background: transparent;
+    width: auto;
+}
+
+.readmore{
+    margin-right: 20px;
+    font-weight: 500;
+    color: #009BC7 !important;
+    text-decoration: underline !important;
+    letter-spacing: normal;
+    font-size: 16px;
+}
+.arrow {
+    margin-left: 5px;
+}   
+
+.programsDropdown{
+    display: block;
+}
+
+.searchBlue:lang(en){
+    margin: 0;
+}
+
+#btnFilter span{
+    background: url(../images/filter-gray.png) no-repeat;
+    width: 26px;
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: -9px;
+}
+#btnFilter:focus span {
+    background: url(../images/filter-blue.png) no-repeat;
+}
+
+#btnSort span, #btnSortPrice span, #btnSortEfficiency span{
+    background: url(../images/sort-gray.png) no-repeat;
+    width: 26px;
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: -9px;
+}
+#btnSort:hover span {
+    background: url(../images/sort-blue.png) no-repeat;
+}
+#btnSort:hover{
+    color:#009bc7 ;
+}
+
+.modal-button{
+    background: transparent;
+    border: 0;
+    color: #989898;
+    height: 52px;
+    width: 80px;
+    padding-bottom: 8px;
+}
+.modal-button:focus  {  
+    color:#009bc7 ;
+}
+.modal-button span{
+    background: url(../images/filter-gray.png) no-repeat;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.modal-button:focus span {  
+    background: url(../images/filter-blue.png) no-repeat;
+}
+
+
+.vSeparator{
+    height: 35px;
+    width: 2px;
+    background: #BDBDBD;
+    margin-top: 5px;
+}
+
+.col-2{
+/*     width: 88px; */
+}
+
+.category:before {
+    margin-bottom: 2px;
+}
+.dropdown-menu[aria-labelledby="btnFilter"] {
+    min-width: 370px;
+    max-height: inherit !important;
+}
+.dropdown-menu[aria-labelledby="btnFilter"] td {
+    border-width: 0px !important;
+    width: 50%;
+    white-space: nowrap;
+    text-align: left;
+}
+.dropdown-menu{
+    min-width:250px;
+    z-index: 2;
+    border-radius: 0;
+    margin-top: 10px;
+    padding: 0.75rem;
+    top:auto;
+    transform: translate3d(-75%, 6%, 0px);
+    box-shadow: 1px 2px 5px #bdbdbd;
+}
+.dropdown-menu{
+    min-width: 350px;;
+    border-radius: 0;
+    margin-top: 10px;
+    padding: 0.75rem;
+    width:100%;
+    border-radius: 7px;
+}
+.divTitle > .title{
+    font-size: 18px;
+    text-transform: unset;
+}
+.alphaOnly{
+    width: 100%;
+    height: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.5px solid #989898;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: #000;
+}
+
+.searchSuggestion{
+    box-shadow: 1px 2px 5px #bdbdbd;
+    padding: 1px 8px;
+    margin-top: 8px;
+}
+.projImage{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+    margin: 7px 18px 7px 7px;
+}
+
+.projText{
+    font-size: 14px;
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 10px !important;
+}
+
+.viewProject{
+    font-size: 9px;
+    margin-bottom: 15px;
+}
+
+
+.tbl{
+    width: 100%;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.tbl td{
+    padding:5px;
+}
+
+.customTime{
+    background: transparent;
+    border: 0;
+    color: #23B6D0;
+    text-decoration: underline;
+    font-size: 13px;
+}
+
+.reset{
+    width: 120px;
+    height: 40px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 25px;
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+    background: #FFF;
+    border: 1px solid #009BC7;
+    color: #009BC7;
+    transition: background 1s;
+}
+.blueBtn{
+    width: 120px;
+    height: 40px;
+}
+
+
+.chkbox{
+    width: 20px;
+    height: 20px;
+}
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 13px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    border: 1px solid #BDBDBD;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #23B6D0;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 7px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@media screen and (max-width: 600px){
+    .topTools {
+        flex-direction: column-reverse;
+    }
+}
+@media screen and (max-width: 480px){
+    .add {
+        margin-top: 0;
+        width: 120px;
+        height: 40px;
+    }
+
+    .contentt{
+        display: contents !important;
+    }
+}
+
+/* body{ */
+/*     min-width: 419px; */
+/* } */

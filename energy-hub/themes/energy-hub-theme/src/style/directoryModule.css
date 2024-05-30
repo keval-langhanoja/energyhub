@@ -1,0 +1,244 @@
+.joinTxt a{
+    padding: 0 5px;
+    color: #FEFEFE !important;
+    text-decoration: underline !important;
+}
+.joinTxt a:hover{
+    color: #23B6D0 !important;
+}
+
+.blueBtn{
+    width: 180px;
+    height: 40px;
+    text-transform: none;
+}
+.aboutUsImage {
+    height: 250px; 
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.aboutUsImage:lang(ar){
+    right: 20%;
+}
+
+.greenBorder{
+    top: 105px;
+    border-left: 6px solid #8AAF29;
+    display: inline;
+    margin-left: -15px;
+    margin-right: 8px;
+}
+
+.institutionText{
+    font-size: 22px;
+    color: #333;
+    letter-spacing: normal;
+    padding-left: 15px;
+}
+.circleBlue{
+    color: #23B6D0;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #23B6D0;
+    display: block;
+}
+
+.circleBlue span{
+    margin-top: -2px;
+    display: block;
+    font-size: 25px;
+}
+
+.slider{
+    background: transparent;
+    border: 0;
+}
+
+.blueBorderBtn {
+    background: #FFF;
+    border: 1px solid #009BC7;
+    color: #009BC7;
+    border-radius: 25px;
+    padding: 0;
+    width: 140px;
+    font-size: 14px;
+    height: 40px;
+    margin-top: 20px;
+}
+.blueBorderBtn span{
+    text-align:center;
+    margin-left: 10px;
+}
+
+.divider{
+    border-left: 6px solid #2FADD1;
+}
+
+.item{
+    position: relative;
+}
+.profile{
+    height: 270px;
+    width: 230PX;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 10px;
+    background: #fff;
+    border:solid 0.9px transparent;
+    transition: .5s;
+    box-shadow: 0px 5px 13px 1px rgba(23,84,116,0.18);
+    margin:10px;
+    border-top: 3px solid #2EB9D2;
+}
+.profile a{
+    display: block;
+}
+.profile:hover{
+    z-index: 50;
+    border-radius: 3px;
+    text-decoration: none;
+    box-shadow: 0 7px 17px 0 rgba(23,84,116,0.18);
+}
+.profile-image{
+    width: 100%;
+    height:  auto;
+    padding: 10px;
+    text-align: center;
+}
+.profile-image img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0px 3px 9px -2px #7F7F7F;
+}
+.profile-text{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.profile-text h1{
+    font-size:  15px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.profile-text p{
+    font-size: 13px;
+}
+.profile-text p span{
+    padding: 2px 5px;
+    border: 1px solid #ccc;
+    font-size: 10px;
+    margin-left: 20px;
+}
+
+/* .userTypeCard{ */
+/*     height: 150vh */
+/* } */
+
+.carousel-container .carousel-inner {
+    overflow: hidden;
+}
+.carousel-container .track {
+    display: inline-flex;
+    transition: transform 0.5s;
+}
+.carousel-container .card-container {
+    width: 259px;
+    flex-shrink: 0;
+    height: 300px;
+    box-sizing: border-box;
+}
+.carousel-container .card-container .card {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.nav button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.nav .prev {
+    left: -30px;
+    display: none;
+}
+.nav .prev.show {
+    display: block;
+}
+.nav .next {
+    right: -30px;
+}
+.nav .next.hide {
+    display: none;
+}
+  
+.card > * {
+    flex: 1;
+}
+.card .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.card .info {
+    flex-basis: 40px;
+    background: #333;
+    color: #fff;
+    flex-grow: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+  
+
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+.carousel-container {
+    width: 50.5%;
+    min-height: 250px;
+    position: relative;
+}
+@media screen and (max-width: 1200px) {
+/*     .userTypeCard{ */
+/*         height: 180vh */
+/*     } */
+    .carousel-container {
+        width: 34%;
+    }
+}
+@media screen and (max-width: 912px) {
+    .carousel-container {
+        width: 17.6%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .carousel-container {
+        width: 34%;
+    }
+}
+@media screen and (max-width: 621px) {
+    .carousel-container {
+        width: 17.6%;
+    }
+}
+@media screen and (max-width: 480px) {
+/*     .userTypeCard{ */
+/*         height: 200vh */
+/*     } */
+}

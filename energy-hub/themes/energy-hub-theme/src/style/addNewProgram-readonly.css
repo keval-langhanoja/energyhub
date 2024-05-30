@@ -1,0 +1,91 @@
+.card.info p {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.14px;
+    color: #333333;
+}
+
+.separatorDashed {
+    height: 1px;
+    background: #383838;
+    opacity: 0.33;
+    margin-top: 1rem;
+    background:
+      repeating-linear-gradient(to right,#383838 0,#383838 8px,transparent 8px,transparent 12px)
+      /*10px red then 2px transparent -> repeat this!*/
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: transparent !important;
+    border: none;
+}
+.data{
+    color: #333333 !important;
+    font-size: 16px !important;
+}
+
+.lblWebsiteURL{
+    text-decoration: underline !important;
+}
+.lblProgramTitle{
+    font-weight: bold !important;
+}
+
+#elementId{
+    width: 100% !important;
+    height: 15rem !important;
+    overflow-y: scroll !important;
+}
+.about-image{
+    margin-left: 15px;
+    border-radius: 15px;
+    max-width: 100%;
+    height: 200px;
+}
+
+.bootstrap-tagsinput{
+    width: 100%;
+    border: 0 !important;
+    border-radius: 0;
+    box-shadow: unset !important;
+    border-radius: 10px;
+}
+
+.bootstrap-tagsinput > .tag{
+    background-color: #F0F5FC;
+    border-radius: 16px;
+    padding: 0.3rem 1rem;
+    color: #208fff;
+    line-height: 40px;
+}
+
+.dashedBorder {
+     border: 0;
+}
+
+.document {
+    background: transparent;
+    border: 0;
+    height: auto;
+}
+
+.submit {
+    width: 150px;
+}
+.reset {
+    width: 180px;
+}
+
+.no-border>.bootstrap-tagsinput .tag [data-role="remove"]:after {
+    content: "";
+    padding: 0px 2px;
+}
+
+@media screen and (max-width: 480px) {
+    .data {
+        font-size: 12px !important;
+    }
+    .registerationForm{
+        font-size: 12px !important;
+    }
+}

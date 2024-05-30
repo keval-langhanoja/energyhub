@@ -1,0 +1,295 @@
+.userProfile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}   
+.profileBorder{
+   padding: 1.5px;
+}
+ .profileBorder.EnergyHubUser{
+     border: 1px solid rgb(35, 182, 208, .32) 
+ }
+ .profileBorder.EntrepreneurUser{
+     border: 1px solid #8AAF29  
+ }
+ .profileBorder.EnergyCompanyUser{
+     border: 1px solid  #093A5D
+ }
+ .profileBorder.InvestorUser{
+    border: 1px solid #23B6D0   
+}
+.profileBorder.MentorUser{
+    border: 1px solid #FEC725  
+}
+.profileBorder.AcademicUser{
+    border: 1px solid #2B7630  
+}
+.profileBorder.IndustryUser{
+    border: 1px solid rgb(138, 175, 41, .32)  
+}
+/*notification*/
+.notifications {
+    border-right: 1px solid rgb(112, 112, 112, 0.14);
+    border-left: 1px solid rgb(112, 112, 112, 0.14);
+}
+.notifications .dropdown-menu{
+    width: 458px;
+    height: 85vh;    
+    transform: translate3d(0px, 55px, 0px) !important;
+    border: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 20px;
+    right: 0;
+    left: auto !important;
+}
+.notifications .dropdown-menu:lang(ar){
+    right: auto !important;
+    left: 0 !important;
+}
+.dropdownHeader{
+    border-bottom: 1px solid rgb(112, 112, 112, 0.14);
+}
+.close{
+    background: transparent;
+    border: 0;
+}
+.close:hover svg path{
+    stroke: #009BC7;
+}
+.allNotifications{
+    height: calc(100% - 100px);
+    overflow: auto;
+    overflow-x: hidden !important;
+}
+.notificationItem{
+    height: 78px;
+    background: #FFF;
+    border-radius: 15px;
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #FAFBFC;
+    text-align: start;
+}
+.notificationItem.new{
+    background: #FAFBFC;
+}
+.name{
+    font-size: 14px;
+    font-weight: normal;
+    color: #4E5D78;
+}
+.notificationItem p{
+    font-size: 12px;
+    font-weight: normal;
+    color: #B0B7C3;
+    margin-bottom: 0 !important;
+}
+.blueDot, .time{
+    position: absolute;
+    right: 1.5rem;
+}
+.blueDot:lang(ar), .time:lang(ar){
+    right: auto;
+    left: 1.5rem;
+}
+.time{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #B0B7C3;
+    top: .75rem;
+}
+.blueDot{
+    width: 7px;
+    height: 7px;
+    background: #377DFF;
+    border-radius: 50%;
+    bottom: .75rem;
+    display: none;
+}
+.notificationItem.new .blueDot{
+    display: block;
+}
+.addBorder{
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 45px;
+    padding: 1rem;
+    position: relative;
+}
+.addBorder::before{
+    content: '';
+    width: 3px;
+    height: 45px;
+    background: #F3F3F3;
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+}
+.addBorder:lang(ar):before{
+    left: auto;
+    right: 0;
+}
+.notificationItem .links{
+    font-size: 12px;
+    margin: 0;
+}
+.notificationItem .btns button{
+    width: 98px;
+    height: 29px;
+    box-shadow: 0px 7px 17px #69696929;
+    border-radius: 15px;
+    border: 0;
+    font-size: 11px;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+.accept{
+    background: #23B6D0;
+    color: #FFF;
+}
+.ignore{
+    background: #FFF;
+    border: 1px solid #23B6D0 !important;
+    color: #23B6D0;
+    margin: 1rem 1rem !important;
+}
+.highlight{
+    width: 68px;
+height: 21px;
+background: #F5FCF9;
+border-radius: 15px;
+font-size: 11px;
+display: inline-block;
+text-align: center;
+}
+.highlight.accepted{
+    color: #38CB89;
+}
+.highlight.rejected{
+    color: red;
+}
+/*notification*/
+
+.programsFlex {
+    margin-top: -5px;
+    width: 100%;
+}
+.viewMyProjects:lang(en) {
+    margin-left: 1rem;
+    margin-right: auto;
+}
+.viewMyProjects:lang(ar) {
+    margin-right: 1rem;
+    margin-left: auto;
+}
+.viewMyProjects span{
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.18px;
+    color: #23B6D0;
+}
+.viewMyProjects:lang(ar)::after{
+	transform: rotate(180deg);
+	margin: 0px 7px 10px;
+}
+.viewMyProjects::after{
+    content: '';
+    background: url('../images/doubleBlueArrow.svg') no-repeat;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    margin: 10px 7px 0;
+    transition: .5s;
+}
+.viewMyProjects:lang(ar):hover:after {
+    margin-right: .75rem !important;
+}
+.viewMyProjects:lang(en):hover:after {
+    margin-left: .75rem !important;
+}
+.add{
+    width: 88px;
+    height: 40px;
+    background: #23B6D0;
+    border-radius: 20px;
+    color: #fff;
+    border: 0;
+    transition: .3s;
+}
+.add:hover{
+    background: rgb(35, 182, 208, .9) !important;
+}
+@media screen and (max-width: 1024px) {
+    .programsFlex{
+        flex-wrap: wrap;
+    }
+    .programsFlex h1{
+        width: 100%;
+    }
+    .viewMyProjects{
+        margin: 0 !important;
+    }
+}
+@media screen and (max-width: 980px) {
+
+}
+@media screen and (max-width: 767px) {
+    .notifications .dropdown-menu {
+        width: 80%;
+        height: 100%;
+        transform: translate3d(0,0,0) !important;
+        border-radius: 0;
+        position: fixed !important;
+    }
+}
+@media screen and (max-width: 480px) { 
+    .userProfile{
+        width: 35px;
+        height: 35px;
+    }
+    .flag{
+        margin: 0 .5rem !important;
+        width: 27px;
+    }
+    .menuBars{
+        margin: 0 5px !important;
+    }    
+    .notifications .dropdown-menu {
+        width: 100%;
+    }
+    .viewMyProjects{
+        width: 100%;
+    }
+    .viewMyProjects span{
+        font-size: 16px;
+    }
+    .add {
+        margin-top: 1rem;
+        width: 80px;
+        height: 35px;
+    }
+    .notificationItem .btns button{
+        width: 78px;
+    }
+}
+/*SCROLL BAR*/
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D8D8D8;
+    border-radius: 10px;
+    margin: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(202, 202, 202);
+  }
+  /*SCROLLBAR END*/

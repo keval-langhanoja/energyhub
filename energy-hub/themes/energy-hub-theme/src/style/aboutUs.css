@@ -1,0 +1,208 @@
+#values, #vision , #mission , #about{
+   padding-top: 80px;
+   margin-top: -80px;
+}
+.aboutUsImage {
+    height: 100%; 
+    width: 100%;
+    object-fit: contain;
+    object-position: 50% 3%;
+}
+.aboutUsImage:lang(ar){
+    right: 20%;
+}
+/* Search */
+.searchBlue{
+    background: #F0F5FC;
+/*     width: 395px; */
+    height: 48px;
+    padding: 0 10px;
+}
+.searchBlue input{
+    width: 90%;
+    height: 100%;
+    background: transparent;
+    padding: 0 10px;
+}
+.searchBlue input::placeholder{
+    color: #9CB8CE
+}
+.searchBlue:lang(en){
+    margin-left: auto;
+}
+.searchBlue:lang(ar){
+    margin-right: auto;
+}
+
+/*menuLinks*/
+.menuLinks {
+    margin-top: 40px;
+}
+.menuLinks a{
+    font-size: 15px;
+    letter-spacing: 1.02px;
+    color: #333333;
+    /*text-transform: uppercase;*/
+    text-decoration: none;
+    display: inline-flex;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
+    flex-wrap: wrap;
+    font-weight: 500;
+}
+.menuLinks a:hover::after,
+.menuLinks a.active::after{
+    width: 100%;
+    background: #009BC7;
+} 
+.menuLinks a::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: transparent;
+    transition: width .3s;
+}
+.menuLinks a:hover,
+.menuLinks a.active,
+.menuLinks a.active span,.menuLinks a:hover span{
+color: #009BC7 !important;
+}
+
+.showSmall{
+    display: none;
+}
+/*responsive*/
+.ImageCard{
+    width: 349px;
+    height: 223px;
+    border: 1px solid #E5E5E5;
+    padding: 1rem;
+}
+@media screen and (max-width: 1366px) {
+}
+@media screen and (max-width: 1200px) {
+    .aboutDetail, .missionDetail,.visionDetail,.valuesDetail{
+        flex-wrap: wrap;
+    }
+    .ImageCard {
+        margin: 0 !important;
+    }
+    .ImageCard img{
+    width: 100%;
+    height: 100%;
+    }
+}
+@media screen and (max-width: 1200px) {  
+    
+}
+/* @media screen and (max-width: 1024px) { */
+/*     .searchBlue { */
+/*         width: 350px; */
+/*     } */
+/* } */
+@media screen and (max-width: 980px) {  
+}
+@media screen and (max-width: 767px) {
+    .showSmall{
+        display: block;
+    }
+    .hideSmall{
+        display: none;
+    }
+    .menuLinks{
+        display: none;
+    }
+    .searchBlue {
+        width: 300px;
+    }
+    .ImageCard{
+        margin: 0 !important;
+    }
+    .aboutText, .missionText,.visionText,.ValuesText{
+        margin: 1rem 0 0 !important;
+    }
+    .ImageCard {
+        width: 100%;
+    }
+    .aboutText h1, .missionText h1,.visionText h1,.ValuesText h1{
+        font-size: 18px;
+    }
+    .aboutText p, .missionText p,.visionText p,.ValuesText p{
+        font-size: 16px;
+    }
+    .col{
+    flex: none;
+    }
+}
+@media screen and (max-width: 480px) { 
+    .searchBlue {
+        width: 100%;
+    }
+    .ImageCard {
+        height: 180px;
+    }
+    .topTools{
+       flex-direction: column-reverse;
+    }
+    .menuLinksDropdown{
+        margin: 1.5rem auto 0 0  !important;
+    }
+    .menuLinksDropdown:lang(ar){
+        margin: 1.5rem 0 0 auto  !important;
+    }
+}
+.menuLinksDropdown{
+    display: none;
+}
+.menuLinksDropdown div:nth-child(1){
+    width: 115px;
+    height: 48px;
+    border: 1px solid #ededed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 0 10px 0 0;
+}
+.menuLinksDropdown div:lang(ar):nth-child(1){
+    margin: 0 0 0 10px;
+}
+@media screen and (max-width: 767px) {
+    .menuLinksDropdown{
+        display: block;
+    }
+}
+.menuLinksDropdown .dropdown-menu {
+    width: 180px;
+    transform: translate3d(0px, 52px, 0px) !important;
+    border: 0;
+    border-radius: 0 !important;
+    border-bottom-right-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
+    box-shadow: 0px 7px 17px #79797929;
+}
+.menuLinksDropdown .dropdown-menu a{
+    display: block;
+    text-decoration: none;
+    color: #333333;
+    margin: 1rem;
+}
+.menuLinksDropdown .dropdown-menu a.active,
+.menuLinksDropdown .dropdown-menu a:hover{
+    color: #009BC7;
+}
+
+.menuLinksDropdown .dropdown-menu img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.menuLinksDropdown .dropdown-menu img:lang(ar) {
+    margin-left: 10px;
+    margin-right: auto;
+}

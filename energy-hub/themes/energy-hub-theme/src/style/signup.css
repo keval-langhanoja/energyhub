@@ -1,0 +1,305 @@
+.content .green2:lang(ar){
+    left: auto !important;
+    right: 2% !important;
+}
+.signup .bgImage{  
+    width: 100%;
+    height: 25vh;
+    position: absolute;
+    background-image: url('/o/energy-hub-theme/images/temp2Bg.png');
+    background-size: cover;
+}
+.signup .bgImage:lang(ar){
+    transform: scaleX(-1);
+}
+.back a{
+    text-decoration: none !important;
+}
+.back:hover a{
+    color:#009BC7 !important;
+}
+.back:hover svg path{
+    fill:#009BC7 !important;
+}
+.back svg:lang(ar){
+    transform: scaleX(-1);
+}
+.goLogin p{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #707070;
+    text-transform: uppercase;
+    padding: 0 10px 0 0;
+}
+.goLogin p:lang(ar){
+    padding: 0 0 0 10px;
+}
+.goLogin a{
+    font-weight: 500;
+    letter-spacing: 1.02px;
+    color: #009BC7 !important;
+    text-transform: uppercase;
+}
+.goLogin a:hover{
+    color: rgb(35, 182, 208, .8) !important; 
+}
+.choosenUserDetails span{
+    font-size: 22px;
+    letter-spacing: 0.22px;
+    color: #333333;
+}
+.userTypeImage{
+    width: 70px;
+    border-top: 4px solid;
+    display: flex;
+    justify-content: center;
+}
+.registerationForm h1{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #333333;
+    text-transform: uppercase;
+}
+.registerationForm label{
+    font: 16px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: #707070;
+    margin-bottom: 5px;
+}
+.registerationForm input,
+.registerationForm select{
+    width: 100%;
+    height: 59px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.5px solid #989898;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #707070;
+    margin-bottom: 0!important;
+}
+
+.custom-select[multiple], .custom-select[size]:not([size="1"]) {
+    background-image: none !important;
+}
+
+.registerationForm:lang(en) select{ 
+	border-radius: 0;
+	vertical-align: middle;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
+}
+
+.registerationForm:lang(ar) select{ 
+	border-radius: 0;
+	vertical-align: middle;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat left 0.75rem center/8px 10px;
+}
+.registerationForm input[type="checkbox"]{
+	width: 20%;
+    margin: 0 10px;
+}
+.registerationForm .inputContainerCheckbox .form-inline{
+	width: 100%;
+}
+
+.custom-select:lang(en):disabled,
+.custom-select:lang(ar):disabled  {
+    color: rgb(108, 117, 125);
+    background-color: rgb(233, 236, 239);
+}
+
+.registerationForm .inputContainerCheckbox{
+	display: flex;
+    align-items: flex-end;
+}
+.registerationForm .inputContainerCheckbox .form-inline label{
+	display: flex !important;
+}
+.reset,
+.submit{
+    width: 152px;
+    height: 49px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 25px;
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+}
+.blueBorderBtn{
+    background: #FFF;
+    border: 1px solid #009BC7;
+    color: #009BC7;
+    transition: background 1s;
+}
+.blueBorderBtn:hover{
+    color: #FFF;
+    border: 1px solid #009BC7;
+    background: #009BC7;
+}
+.error,
+.error.mobile:lang(ar) {
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: #FF0000;
+    opacity: 0.68;
+    float: right;
+}
+.error.mobile,
+.error:lang(ar){
+    float: left;
+}
+.inputContainer:focus-within label{
+    color: #009BC7;
+}
+.required label:after {
+    content: url('/o/energy-hub-theme/images/mandatory.svg');
+    padding: 0 5px;
+}
+
+
+
+/*signup2*/
+.upload{
+    width: 93px;
+    height: 93px;
+    border: 2px solid #3F99C3;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0 2rem;
+}
+.uploadCard span{
+    display: none;
+    color:#009BC7;
+    margin: 0 5px;
+}
+.document{
+    width: 189px;
+    height: 171px;
+    background: rgba(157, 162, 163, 0.03);
+    border: 1px solid rgba(112, 112, 112, 0.03);
+}
+.remove {
+    width: 24px;
+    height: 24px;
+    background: #E6E6E6 0% 0% no-repeat padding-box;
+    border-radius: 50%;
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px 0 auto;
+}
+.document p{
+    color: #777777;
+}
+.dashedBorder{
+    border: 0.5px dashed #989898;
+}
+
+.description textarea{
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 0.5px solid #989898;
+font-size: 16px;
+font-weight: bold;
+letter-spacing: 0px;
+color: #707070;
+width: 100%;
+display: block;
+min-height: 200px;
+}
+
+.separator{
+    height: .5px;
+    background: #383838;
+    opacity: 0.33;
+    margin: 3rem 0;
+}
+@media screen and (max-width: 1024px) {
+    .signup .content, .userType .content{
+        padding-top: 1rem !important;
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 480px){
+.document, .uploadCard {
+    width: 155px !important;
+}
+.document p {
+    font-size: 14px;
+}
+}
+
+@media screen and (max-width: 767px) { 
+    .uploadCard{
+        height: auto !important;
+        text-align: start !important;
+            width: auto !important;
+            margin: 0 auto .5rem !important;
+        }
+        .uploadCard span{
+            display: inline-block;
+        }
+    .upload {
+        width: 43px;
+        height: 43px;
+        margin: 0 !important;
+    }
+    .upload img{
+        width: 25px;
+    }
+    .document{
+        width: 100% !important;
+        height: auto !important;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 8px 0;
+    }
+    .docDetails{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .docDetails img{
+        width: 20px;
+        margin: 0 8px !important;
+    }
+    .docDetails p{
+        font-size: 13px;
+        text-align: left;
+        margin: 0 !important;
+    }
+    .docDetails p:lang(ar){
+        text-align: right;
+    }
+    .remove{
+        background: transparent !important;
+        margin: 0 0 0 auto !important;
+    }
+    .remove:lang(ar){
+        margin: 0 auto 0 0 !important;
+    }
+    .description {
+        height: auto !important;
+    }
+}
+@media screen and (max-width: 480px) { 
+    .reset:lang(en){
+        margin-left: 0 !important;
+    }
+    .reset:lang(ar){
+        margin-right: 0 !important;
+    }    
+    .path span {
+        padding: 0 !important;
+    }
+}
+
+.closeSearch svg path{
+    fill: #fff;
+    stroke: #fff;
+}

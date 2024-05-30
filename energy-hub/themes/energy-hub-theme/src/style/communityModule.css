@@ -1,0 +1,31 @@
+.joinTxt a{
+    padding: 0 5px;
+    color: #FEFEFE !important;
+    text-decoration: underline !important;
+}
+.joinTxt a:hover{
+    color: #23B6D0 !important;
+}
+
+.add{
+    width: 180px;
+    height: 40px;
+    background: #23B6D0;
+    border-radius: 20px;
+    color: #fff;
+    border: 0;
+    transition: .3s;
+}
+.add:hover{
+    background: rgb(35, 182, 208, .9) !important;
+}
+
+.aboutUsImage {
+    height: 100%; 
+    width: 100%;
+    object-fit: contain;
+    object-position: 50% 3%;
+}
+.aboutUsImage:lang(ar){
+    right: 20%;
+}

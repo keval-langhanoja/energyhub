@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6.119" height="4.49" viewBox="0 0 6.119 4.49">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="6.119" height="4.49" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect x="8" y="6" width="6.119" height="4.49" fill="none"/>
+    </clipPath>
+    <filter id="Path_1325" x="-8" y="-6" width="20.559" height="22.49" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_1325-2" x="-5.441" y="-6" width="20.559" height="22.49" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_848" data-name="Group 848" transform="translate(613.542 2384.5)">
+    <g id="Scroll_Group_2" data-name="Scroll Group 2" transform="translate(-613.542 -2384.5)" clip-path="url(#clip-path)" style="isolation: isolate">
+      <g id="Group_847" data-name="Group 847" transform="translate(613.542 2384.5)">
+        <g id="Scroll_Group_1" data-name="Scroll Group 1" transform="translate(-621.542 -2390.5)" clip-path="url(#clip-path-2)" style="isolation: isolate">
+          <g id="Group_846" data-name="Group 846" transform="translate(621.542 2390.5)">
+            <g id="Group_729" data-name="Group 729" transform="translate(-787 -2731)">
+              <g id="Group_709" data-name="Group 709" transform="translate(5 -9.5)">
+                <g id="Group_707" data-name="Group 707" transform="translate(169.458 360.49) rotate(-90)">
+                  <g id="Group_642" data-name="Group 642" transform="translate(0 0)">
+                    <g id="Group_667" data-name="Group 667">
+                      <g transform="matrix(0, 1, -1, 0, 4.49, -1)" filter="url(#Path_1325)">
+                        <path id="Path_1325-3" data-name="Path 1325" d="M2.245,2.559a.313.313,0,0,1-.222-.092L.092.537A.315.315,0,1,1,.537.092L2.245,1.8,3.953.092A.314.314,0,1,1,4.4.537L2.467,2.467a.312.312,0,0,1-.222.092Zm0,0" transform="translate(1 4.49) rotate(-90)" fill="#fff"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+                <g id="Group_708" data-name="Group 708" transform="translate(172.018 360.49) rotate(-90)">
+                  <g id="Group_642-2" data-name="Group 642" transform="translate(0 0)">
+                    <g id="Group_667-2" data-name="Group 667">
+                      <g transform="matrix(0, 1, -1, 0, 4.49, -3.56)" filter="url(#Path_1325-2)">
+                        <path id="Path_1325-4" data-name="Path 1325" d="M2.245,2.559a.313.313,0,0,1-.222-.092L.092.537A.315.315,0,1,1,.537.092L2.245,1.8,3.953.092A.314.314,0,1,1,4.4.537L2.467,2.467a.312.312,0,0,1-.222.092Zm0,0" transform="translate(3.56 4.49) rotate(-90)" fill="#fff"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

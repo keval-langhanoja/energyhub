@@ -1,0 +1,475 @@
+.grid {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr);
+	grid-gap: 2rem;
+}
+
+.bold {
+	font-weight: bold !important;
+}
+
+.links {
+	text-decoration: underline;
+	font-size: 14px;
+	font-weight: 400 !important;
+	letter-spacing: 0.14px;
+	color: #23B6D0;
+}
+
+.links:hover {
+	color: rgb(35, 182, 208, .8) !important;
+}
+
+.add {
+	width: auto;
+	height: 40px;
+	background: #009bc7 0% 0% no-repeat padding-box;
+	border-radius: 20px;
+	color: #fff;
+	transition: .3s;
+	box-shadow: 0px 3px 6px #00000029;
+	border: 1px solid #009BC7;
+	opacity: 1;
+	padding: 0 30px;
+}
+
+@media screen and (max-width: 820px) {
+	.add {
+		padding: 0 20px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.add {
+		padding: 0;
+		width:120px;
+	}
+}
+.add:hover {
+	background: rgb(0, 155, 199, 0.7) !important;
+}
+
+.industryDataCollection {
+	padding-left: 25px;
+}
+
+.industryDataCollection h1:before {
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 28px;
+	background: #8AAF29 0% 0% no-repeat padding-box;
+	opacity: 1;
+	left: 0px;
+}
+
+.dataCollectionImage {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	object-position: 50% 3%;
+}
+
+.dataCollectionImage:lang(ar) {
+	right: 20%;
+}
+
+.industryContent h1 {
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 0.2px;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.industryDataCollection p {
+	color: #707070;
+	text-align: left;
+	font: normal normal normal 16px/19px Helvetica;
+	letter-spacing: 0px;
+	opacity: 1;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	overflow: hidden;
+	white-space: pre-line;
+	margin-bottom: 0px;
+}
+.industryDataCollection:lang(ar) p {
+	text-align: right!important; 
+}
+
+.industryDataCollection p:last-of-type {
+	color: #333333;
+	text-align: left;
+	text-transform: uppercase;
+	font: normal normal normal 16px/19px Helvetica;
+	letter-spacing: 0px;
+	opacity: 1;
+	padding-top: 18px;
+	padding-bottom: 7px;
+}
+
+.industryDataCollection a {
+	text-align: left;
+	text-decoration: underline;
+	font: normal normal normal 16px/19px Helvetica;
+	letter-spacing: 0px;
+	color: #707070;
+}
+
+.monitorcard {
+	border: 1px solid #009BC7;
+	opacity: 1;
+	text-align: center;
+}
+
+.monitorcard div p.text {
+	text-align: center;
+	font: normal normal normal 22px/33px Helvetica;
+	letter-spacing: 0.66px;
+	color: #333333;
+}
+
+.monitorcard div p.bold {
+	text-align: center;
+	font: normal normal bold 24px/33px Helvetica;
+	letter-spacing: 0.72px;
+	color: #333333;
+}
+
+.monitorcard div button {
+	width: 125px;
+	height: 40px;
+	background: #009bc7 0% 0% no-repeat padding-box;
+	border-radius: 20px;
+	color: #fff;
+	transition: .3s;
+	box-shadow: 0px 3px 6px #00000029;
+	border: 1px solid #009BC7;
+	opacity: 1;
+	margin-top: 15px;
+}
+
+.monitorcard div button:hover {
+	background: rgb(0, 155, 199, 0.7) !important;
+}
+
+.industryCard {
+	height: 100%;
+	min-height: 200px;
+	border-radius: 0 !important;
+	border: 0 !important;
+	box-shadow: 0px 7px 17px #79797929;
+	transition: .4s;
+	text-decoration: none;
+}
+
+.industryCard.grid {
+	display: grid;
+	grid-template-columns: 155px 1fr;
+	grid-gap: 1rem;
+}
+
+.industryCard .cardDetails:lang(en) {
+	padding-right: 1.5rem;
+}
+
+.industryCard .cardDetails:lang(ar) {
+	padding-left: 1.5rem;
+}
+
+.industryCard .cardDetails .cardTitle {
+	font-size: 18px;
+	font-weight: bold;
+	color: #333333;
+	text-decoration: none;
+}
+
+.industryCard .cardDetails p {
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.14px;
+	color: #333333;
+}
+
+.programImageContainer {
+	display: flex;
+	align-items: center;
+	background: #F0F5FC;
+}
+
+.programCardImage {
+	width: 128px;
+	height: 128px;
+	background-color: #FFFFFF !important;
+	border-radius: 5px;
+	background-repeat: no-repeat !important;
+	background-size: auto !important;
+	background-position: center !important;
+	margin: auto;
+}
+
+.seeAll a {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+
+.seeAll span:nth-child(1) {
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 1.22px;
+	color: #333333;
+	margin: 0 5px;
+}
+
+.arrow.bg-black {
+	background: #333333 !important;
+	transition: all .5s;
+}
+
+.seeAll:hover .arrow {
+	transform: translateX(5px);
+}
+
+.seeAll:hover .arrow:lang(ar) {
+	transform: translateX(-5px);
+}
+
+.industryCard .date {
+	right: 1.3rem;
+	margin: 0 0 0 1rem;
+	width: 46px;
+	height: 50px;
+	padding: 2px 10px;
+}
+
+.industryCard .date:lang(ar) {
+	margin: 0 1rem 0 0;
+}
+
+.category {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+}
+
+.category:lang(ar) {
+	right: 0;
+	left: 1rem;
+	text-align: left;
+}
+
+.category:before {
+	content: '';
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background: #FF0000;
+}
+
+.category a {
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.14px;
+	color: #333333;
+	text-decoration: none;
+}
+
+.industryCard:hover {
+	transform: scale(1.03);
+}
+
+.explore {
+	text-align: right;
+	font: normal normal normal 14px/24px Helvetica Neue;
+	letter-spacing: 0.42px;
+	color: #009BC7;
+	opacity: 1;
+	font-weight: 400;
+	text-decoration: none !important;
+	text-transform: uppercase;
+}
+
+.explore span {
+	transition: all .5s;
+	margin-left: 7px;
+}
+
+.explore:hover span {
+	transform: translateX(5px);
+}
+
+.explore:hover span:lang(ar) {
+	transform: translateX(-5px);
+}
+
+@media screen and (max-width: 1200px) {
+	.industryCard p {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.industryCard {
+		display: block !important
+	}
+	.industryCard .programImageContainer {
+		padding: 1.5rem 0 !important;
+	}
+	.industryCard .cardDetails {
+		padding: 1rem 1rem 2rem !important;
+	}
+	.mainGrid .info .d-flex {
+		padding: 0 !important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.mainGrid {
+		display: block !important;
+	}
+	.industryDataCollection h1:before {
+		left: 0px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.industryCard .date {
+		position: absolute !important;
+		top: 1rem;
+		right: 1rem;
+	}
+	.industryCard .date:lang(ar), .category:lang(ar) {
+		right: auto;
+		left: 1rem;
+	}
+	.category:lang(en) {
+		right: 1rem;
+	}
+	.industryCard p {
+		width: 100%;
+	}
+	.sliderControls {
+		width: auto;
+		text-align: center;
+	}
+}
+
+/*serviceProviders slider*/
+.serviceProviders {
+	margin-top: 5rem !important;
+}
+
+.serviceProviders .content {
+	width: 100%;
+	margin-top: 30px;
+}
+
+.serviceProviders-slider-items p {
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.14px;
+	color: #333333;
+}
+/*.serviceProviders{
+    height: 100vh;
+    display: flex;
+}*/
+.sliderControls button {
+	width: 44px;
+	height: 44px;
+	box-shadow: 0px 3px 6px #00000029;
+	border: 1px solid #43D2F4;
+	padding: 0 !important;
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin: 0 5px;
+	background: linear-gradient(to right, #43D2F4 50%, transparent 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all .5s ease-out;
+}
+
+.sliderControls button:hover {
+	background-position: left bottom;
+}
+
+.sliderControls button:hover svg path {
+	fill: #fff !important;
+}
+
+.prev svg:lang(en) {
+	transform: scaleX(-1);
+}
+
+.next svg:lang(ar) {
+	transform: scaleX(-1);
+}
+
+.serviceProviders-slider {
+	direction: ltr;
+}
+
+.serviceProviders-slider-items {
+	margin: 0 1rem 1rem;
+}
+
+.serviceProviders-slider-items .card {
+	width: auto;
+	height: 200px;
+	background: #FFF;
+	box-shadow: 0px 7px 17px #79797929;
+	opacity: 0.95;
+	border: 0;
+	border-top-width: 4px;
+	border-top-style: solid;
+	padding: 1.5rem;
+}
+
+.serviceProviders-slider-items .card.blue {
+	border-top-color: #23B6D0;
+}
+
+.involveImage {
+	width: 50px;
+	height: 89px;
+	margin: auto;
+}
+
+.serviceProviders-slider-items .readmore {
+	width: 180px;
+	max-height: 50px;
+	border: 1px solid #009BC7;
+	border-radius: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
+
+.serviceProviders-slider-items .readmore small {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	padding: 0 10px 0 0;
+	border-right: 1px solid rgb(0, 155, 199, 0.2);
+	margin: 0 10px 0 0;
+}
+
+.serviceProviders-slider-items .readmore:lang(ar) {
+	direction: rtl;
+}
+
+.serviceProviders-slider-items .readmore small:lang(ar) {
+	margin: 0 0 0 10px;
+	padding: 0 0 0 10px;
+	border-right: 0;
+	border-left: 1px solid rgb(0, 155, 199, 0.2);
+}
