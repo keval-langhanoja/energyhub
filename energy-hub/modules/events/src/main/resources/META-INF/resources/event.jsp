@@ -5,6 +5,8 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <link rel="stylesheet" href="/o/energy-hub-theme/style/eventPage.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <portlet:actionURL var="energyProgramURL" /> 
 <portlet:resourceURL var="testAjaxResourceUrl"></portlet:resourceURL>
@@ -74,7 +76,7 @@
         <circle cx="200" cy="50" r="50" />
     </svg>
     <div class="row">
-    	<c:forEach var="event" items="${eventsList}"> 
+    	<c:forEach var="event" items="${eventsList}">
 	        <div class="col-md-12 col-lg-7 col-xl-8">
 	            <div style="background-color: white; padding:2rem;">
 	                <div class="titleItemDetail d-flex">${event.eventName}</div>
@@ -87,26 +89,26 @@
 	                    <div class="row eventImage">
 	                        <div class="pb-5 d-flex justify-content-between align-items-end">
 	                            <div class="col-md-4">
-	                                <c:if  test="${event.AttendeesTotal gt 0 }">
-		                            	<c:forEach var="att" items="${event.Attendees}" begin="0" end="3" varStatus = "status"> 
+	                                <c:if  test="${event.attendeesTotal gt 0 }">
+		                            	<c:forEach var="att" items="${event.attendees}" begin="0" end="3" varStatus = "status">
 		                            		<img class="cardUserImg whiteBorder ${!status.first ? 'move-left' : ''}" src="${att.PortraitUrl}"
 			            						onerror="this.src='/o/energy-hub-theme/images/no-image.png'; this.onerror=null;"/>
 	                                   	</c:forEach>
-			                            <p class="card-text card-details-small"> ${event.AttendeesNames} 
-			                            	<c:if test="${event.AttendeesTotal gt 3 }">
-				                            	<liferay-ui:message key="and" /> ${event.AttendeesTotal} 
-				                            	<liferay-ui:message key="Others" /> ${event.AttendeesTotal} 
+			                            <p class="card-text card-details-small"> ${event.attendeesNames}
+			                            	<c:if test="${event.attendeesTotal gt 3 }">
+				                            	<liferay-ui:message key="and" /> ${event.attendeesTotal}
+				                            	<liferay-ui:message key="Others" /> ${event.attendeesTotal}
 				                            	<liferay-ui:message key="AreGoing" />
 			                             	</c:if>
-			                             	<c:if test="${event.AttendeesTotal eq 1 }">
+			                             	<c:if test="${event.attendeesTotal eq 1 }">
 				                            	<liferay-ui:message key="IsGoing" />
 			                             	</c:if>
-			                             	<c:if test="${event.AttendeesTotal gt 1 }">
+			                             	<c:if test="${event.attendeesTotal gt 1 }">
 				                            	<liferay-ui:message key="AreGoing" />
 			                             	</c:if>
 			                            </p>
 		                            </c:if>
-		                            <c:if  test="${event.AttendeesTotal eq 0 }">
+		                            <c:if  test="${event.attendeesTotal eq 0 }">
 		                            	<p class="card-text card-details-small"><liferay-ui:message key="FirstToAttend" /></p>
                             	 	</c:if>	
 	                            </div>
@@ -130,17 +132,17 @@
 						                                <table class="tbl">
 						                                    <tr class="bordered">
 						                                        <td>
-						                                            <label class="container"  onclick="ajaxCall('yes','${event.resourcePrimKey}')"><liferay-ui:message key="Yes" /></label>
+						                                            <label class="container"  onclick="ajaxCall('yes','${event.resourcePrimaryKey}')"><liferay-ui:message key="Yes" /></label>
 						                                        </td>
 						                                    </tr>
 						                                    <tr class="bordered">
 						                                        <td>
-						                                            <label class="container"  onclick="ajaxCall('maybe','${event.resourcePrimKey}')"><liferay-ui:message key="Maybe" /></label>
+						                                            <label class="container"  onclick="ajaxCall('maybe','${event.resourcePrimaryKey}')"><liferay-ui:message key="Maybe" /></label>
 						                                        </td>
 						                                    </tr> 
 						                                    <tr>
 						                                        <td>
-						                                            <label class="container" onclick="ajaxCall('no','${event.resourcePrimKey}')"><liferay-ui:message key="No" /></label>
+						                                            <label class="container" onclick="ajaxCall('no','${event.resourcePrimaryKey}')"><liferay-ui:message key="No" /></label>
 						                                        </td>
 						                                    </tr>
 						                                </table>
@@ -217,7 +219,7 @@
 		                                <td>
 		                                    <label class="boldText d-flex justify-content-start tableLabelsData">
 		                                    	<c:forEach var="speaker" items="${event.speakers}" varStatus="loop"> 
-		                                    		<a class="boldText" href="${speaker.profileURL}"> ${speaker.FullName}&nbsp;<c:if test="${!loop.last}">, </c:if></a>
+		                                    		<a class="boldText" href="${speaker}"> ${speaker}&nbsp;<c:if test="${!loop.last}">, </c:if></a>
 		                                    	</c:forEach>
 		                                    </label>
 		                                </td>
@@ -225,7 +227,7 @@
 	                            </c:if>
 	                        </table>
 	                        <div class="py-4 titleItemDetail capitalText d-flex capitalText"><liferay-ui:message key="EventMainTopic" /></div>
-	                        <div class="eventTopicText" id="desc">${event.description}</div>
+	                        <div class="eventTopicText" id="desc">${event.eventDescription}</div>
 	                        <div class="pb-4 pt-5 titleItemDetail capitalText d-flex capitalText"><liferay-ui:message key="MeetEventHost" /></div>
 	                        <div class="card-container">
 	                            <div class="card" style="box-shadow:none !important">
@@ -234,9 +236,9 @@
 	                                        <div class="profile-image">
 	                                            <img src="/o/energy-hub-theme/images/img/user.jpg">
 	                                        </div>
-	                                        <div class="profile-text" onclick="window.location.href = '${event.HostLink}';">
-	                                            <h1>${event.HostName}</h1>
-	                                            <p>${event.HostRole}</p>
+	                                        <div class="profile-text" onclick="window.location.href = '${event.eventHostLink}';">
+	                                            <h1>${event.eventHostName}</h1>
+	                                            <p>${event.eventHostRole}</p>
 	                                            <button class="blueBorderBtn capitalText">
 	                                                <liferay-ui:message key="Explore" />
 	                                                <span class="hrVertical"></span>
@@ -311,7 +313,7 @@
                     </div>
                 </div>
                 <div class="serviceProviders-slider">
-                	<c:forEach var="topic" items="${similarTopics}"> 
+                	<c:forEach var="topic" items="${similarTopics}">
 	                    <div class="serviceProviders-slider-items">
 							<div class="card cardEvent card-small">
 					            <div class="card-body">
@@ -320,28 +322,28 @@
 					                        <div class="">
 					                            <p class="card-subtitle">${topic.startDateDisplay}</p>
 					                            <h5 class="card-title card-header-title-medium">${topic.eventName}</h5>
-					                            <c:if  test="${topic.AttendeesTotal gt 0 }">
-					                            	<c:forEach var="att" items="${topic.Attendees}" begin="0" end="3" varStatus = "status"> 
+					                            <c:if  test="${topic.attendeesTotal gt 0 }">
+					                            	<c:forEach var="att" items="${topic.attendees}" begin="0" end="3" varStatus = "status">
 					                            		<img class="cardUserImg whiteBorder ${!status.first ? 'move-left' : ''}" src="${att.PortraitUrl}"
 						            						onerror="this.src='/o/energy-hub-theme/images/no-image.png'; this.onerror=null;"/>
 				                                   	</c:forEach>
-						                            <p class="card-text card-details-small"> ${topic.AttendeesNames} 
-						                            	<c:if test="${topic.AttendeesTotal gt 3 }">
-							                            	<liferay-ui:message key="and" /> ${topic.AttendeesTotal} 
-							                            	<liferay-ui:message key="Others" /> ${topic.AttendeesTotal} 
+						                            <p class="card-text card-details-small"> ${topic.attendeesNames}
+						                            	<c:if test="${topic.attendeesTotal gt 3 }">
+							                            	<liferay-ui:message key="and" /> ${topic.attendeesTotal}
+							                            	<liferay-ui:message key="Others" /> ${topic.attendeesTotal}
 							                            	<liferay-ui:message key="AreGoing" />
 						                             	</c:if>
-						                             	<c:if test="${topic.AttendeesTotal eq 1 }">
+						                             	<c:if test="${topic.attendeesTotal eq 1 }">
 							                            	<liferay-ui:message key="IsGoing" />
 						                             	</c:if>
-						                             	<c:if test="${topic.AttendeesTotal gt 1 }">
+						                             	<c:if test="${topic.attendeesTotal gt 1 }">
 							                            	<liferay-ui:message key="AreGoing" />
 						                             	</c:if>
 						                            </p>
 						                        </c:if>
-					                            <c:if  test="${topic.AttendeesTotal eq 0 }">
+					                            <c:if  test="${topic.attendeesTotal eq 0 }">
 					                            	<p class="card-text card-details-small"><liferay-ui:message key="FirstToAttend" /></p>
-			                            	 	</c:if>	
+			                            	 	</c:if>
 					                        </div>
 					                        <div class="d-flex align-items-top">
 					                            <img class="card-img-top card-img" src="/o/energy-hub-theme/images/Illustration.png">
@@ -352,15 +354,15 @@
 					                    <div class="d-flex  justify-content-start align-items-center">
 					                        <img class="cardUserImg" src="/o/energy-hub-theme/images/img/user.jpg">
 					                        <div class="mx-2">
-					                            <div class="cardUserName d-flex">${topic.HostName}</div>
+					                            <div class="cardUserName d-flex">${topic.eventHostName}</div>
 					                            <div class="cardUserLive d-flex">
-						                            <c:if test="${topic.isLive}">
+						                            <c:if test="${topic.isLive()}">
 									          		  <span>. </span><liferay-ui:message key="Live" />
 									            	</c:if>
-									            	<c:if test="${topic.isUpcoming}">
+									            	<c:if test="${topic.isUpcoming()}">
 														<span>. </span><liferay-ui:message key="Upcoming" />
 									            	</c:if>
-									            	<c:if test="${topic.ended}">
+									            	<c:if test="${topic.isEnded()}">
 														<span>. </span><liferay-ui:message key="Ended" />
 									            	</c:if>
 					                            </div>
@@ -380,17 +382,17 @@
 							                                <table class="tbl">
 							                                    <tr class="bordered">
 							                                        <td>
-							                                            <label class="container"  onclick="ajaxCall('yes','${topic.resourcePrimKey}')"><liferay-ui:message key="Yes" /></label>
+							                                            <label class="container"  onclick="ajaxCall('yes','${topic.resourcePrimaryKey}')"><liferay-ui:message key="Yes" /></label>
 							                                        </td>
 							                                    </tr>
 							                                    <tr class="bordered">
 							                                        <td>
-							                                            <label class="container"  onclick="ajaxCall('maybe','${topic.resourcePrimKey}')"><liferay-ui:message key="Maybe" /></label>
+							                                            <label class="container"  onclick="ajaxCall('maybe','${topic.resourcePrimaryKey}')"><liferay-ui:message key="Maybe" /></label>
 							                                        </td>
-							                                    </tr> 
+							                                    </tr>
 							                                    <tr>
 							                                        <td>
-							                                            <label class="container" onclick="ajaxCall('no','${topic.resourcePrimKey}')"><liferay-ui:message key="No" /></label>
+							                                            <label class="container" onclick="ajaxCall('no','${topic.resourcePrimaryKey}')"><liferay-ui:message key="No" /></label>
 							                                        </td>
 							                                    </tr>
 							                                </table>
@@ -401,7 +403,7 @@
 						            	</c:if>
 					                </div>
 					            </div>
-					        </div>                    	
+					        </div>
 	                    </div>
                     </c:forEach>
                 </div>
@@ -431,6 +433,7 @@
 		navigator.clipboard.writeText(location.origin + detailURL);
 	}
 
+$(document).ready(function(){
     $('.serviceProviders-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -441,7 +444,7 @@
         responsive: [{
             breakpoint: 767,
             settings: {
-                slidesToShow:2,
+                slidesToShow: 2,
                 slidesToScroll: 2
             }
         },
@@ -451,9 +454,10 @@
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
-        }
-        ]
+        }]
     });
+});
+
     
     function ajaxCall(key, eventId) {
 		var xhr = new XMLHttpRequest();

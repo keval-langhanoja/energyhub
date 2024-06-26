@@ -4,23 +4,18 @@
 <%@ taglib uri="http://liferay.com/tld/aui" prefix="aui"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
-<portlet:actionURL var="energyProgramURL" />
-<portlet:resourceURL var="testAjaxResourceUrl"></portlet:resourceURL>
-
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-<link
-	href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css"
-	rel="stylesheet">
 <link rel="stylesheet"
 	href="/o/energy-hub-theme/style/events-Calendar.css">
 <!-- <script -->
-<!-- 	src="/o/energy-hub-theme/plugins/fullcalendar-5.10.1/lib/main.js"></script> -->
+<!-- src="/o/energy-hub-theme/plugins/fullcalendar-5.10.1/lib/main.js"></script> -->
 <link rel="stylesheet" type="text/css"
 	href="/o/energy-hub-theme/style/bootstrap/bootstrap-tagsinput.css" />
 <script src="/o/energy-hub-theme/js/bootstrap-tagsinput.min.js"></script>
+
+<portlet:actionURL name="addEvent" var="addEventActionURL"/>
+
 
 <style>
 .form-group {
@@ -107,7 +102,7 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 <div class="modal fade" id="addEventModal" tabindex="-1" role="dialog"
 	aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content overflow-scroll">
 			<div class="modal-header" id="modal-header">
 				<h4 class="modal-title" id="modal-title">
 					<liferay-ui:message key="AddNewEvent" />
@@ -115,8 +110,8 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 				<button type="button" class="close" id="closeButton">X</button>
 			</div>
 			<div class="modal-body" id="modal-body">
-				<aui:form id="createAccount_form" cssClass="registerationForm"
-					style="max-height: 470px;" accept-charset="UTF8" method="POST">
+				<aui:form action="<%=addEventActionURL%>" cssClass="registerationForm"
+					style="max-height: 470px;" enctype="multipart/form-data" method="POST">
 					<div class="row">
 						<div class="col-12 col-md-6 mt-4 required inputContainer">
 							<label><liferay-ui:message key="EventName" /></label>
@@ -181,7 +176,7 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 							<label><liferay-ui:message key="UploadCoverImageFor" /></label>
 							<div class="add-innovation-dropdown uploadButton-div">
 								<aui:input style="opacity:0;position: absolute;" type="file"
-									id="EventImage" name="EventImage" label="" accept="image/*" hidden="hidden" />
+									id="EventImage" name="EventImage" label="" accept="image/*" />
 								<button type="button" id="custom-button" class="uploadButton">
 									<img src="/o/energy-hub-theme/images/upload.svg">
 									<liferay-ui:message key="UploadFile" />
@@ -194,48 +189,22 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 					<div class="row">
 						<div class="col-12 col-md-12 mt-4 inputContainer">
 							<label><liferay-ui:message key="Speakers" /></label>
-							<div class="add-innovation-dropdown" value="" id=tagInvited>
-								<aui:input id="tagInvitedValuesInput" name="tagInvitedValuesInput" type="hidden"></aui:input>
-							</div>
-							<script type="text/javascript"> 
-								var availableUsers = {};
-								$('#tagInvited').tagsinput({
-									itemValue: 'id',
-									itemText: 'text',
-									trimValue: true,
-									allowDuplicates: false
-								});
-								
-								<c:forEach var="tag" items="${selectedUsers}">
-								$('#tagInvited').tagsinput('add', { id: '${tag.id}', text: '${tag.name}' });
-								</c:forEach>
-								
-								<c:forEach var="user" items="${allUsers}">
-									availableUsers['${user.emailAddress}'] = {
-										portraitId: ${user.portraitId},
-										text: "${user.firstName} ${user.lastName}<br>${user.emailAddress}",
-										firstName: "${user.firstName}",
-										lastName: "${user.lastName}",
-										name: "${user.firstName} ${user.lastName}".trim() ? "${user.firstName} ${user.lastName}" : "${user.emailAddress}",
-										email: "${user.emailAddress}",
-										img: "${user.comments}"
-									};
-								</c:forEach>
-							</script>
+							<aui:input id="tagInvitedValuesInput" name="Speakers" label=""></aui:input>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-12 col-md-12 mt-4 description inputContainer">
+						<div class="col-12 col-md-12 mt-4 inputContainer">
 							<label><liferay-ui:message key="Description" /></label>
-							<div id="EventDescription"></div>
+							<aui:input id="EventDescription" name="EventDescription" label=""></aui:input>
 						</div>
 					</div>
 					<div class="d-flex justify-content-end fixBtns my-2"">
 						<button class="blueBorderBtn reset mt-3 mx-3" type="" id="clear">
 							<liferay-ui:message key="Clear" />
 						</button>
-						<aui:button cssClass="blueBtn submit mt-3" type="submit"
-							onclick="addEventAJAX()" id="save" value="Add" />
+					   <div cssClass="blueBtn submit mt-3">
+                            <aui:input type="submit" id="save" value="Add" name="Add" label=""></aui:input>
+                       </div>
 					</div>
 			</div>
 			<aui:input id="coverImageName" value ="${logoName}" name="coverImageName" type="hidden"></aui:input> 
@@ -250,20 +219,20 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 	    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	    return re.test(String(email).toLowerCase());
 	}
-	
+
 	$('body').scroll(function(){
 		$('#tagInvited-dropdown').remove();
   	});
-	
+
 	$(document).ready(function () {
 	    $('#EventDescription').summernote();
 	    $('.note-icon-picture').parent('.note-btn').hide();
 	    $('.note-icon-video').parent('.note-btn').hide();
-	    
+
 	    var img = document.createElement("img");
 	    img.src = "/o/energy-hub-theme/images/img/user.jpg";
-	    
-	    
+
+
 	    $('#tagInvited').off('beforeItemRemove').on('beforeItemRemove', function(event) {
 	    	$('#tagInvited-dropdown').remove();
 	    }).off('itemAdded').on('itemAdded', function(event) {
@@ -296,16 +265,16 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 	            		}
 	            	}
 	            }
-	            
+
 	            e.target.value = '';
 	        }
-	    	
+
 	        // if any key entered then show the dropdown menu
 	        // if not removed item in the tags then don't do any thing
 	        else {
 	        	if( !$('#tagInvited-dropdown').length ) {
 		       		$('body').append('<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" id="tagInvited-dropdown"></ul>');
-		        	$('#tagInvited-dropdown').css({	
+		        	$('#tagInvited-dropdown').css({
 		        		position: 'absolute',
 		        		display: 'inline-block',
 		        		top: $(e.target).offset().top+75,
@@ -317,7 +286,7 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 		        		});
 		        		return items.join('');
 		        	})());
-		        	
+
 		        	// add event on the menu item, when click then add it to the tags
 		        	$('#tagInvited-dropdown').off('click', 'li a').on('click', 'li a', function () {
 		        		// add the clicked item to the tags
@@ -328,7 +297,7 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 		        		e.target.value = '';
 		        	});
 	        	}
-	        	
+
 	        	if( e.keyCode == 38 ) {
 	        		var activeItem = $('#tagInvited-dropdown').find('a.active').removeClass('active').closest('li').prev('li');
 	        		while(activeItem.length && !activeItem.is(':visible') ) {
@@ -338,17 +307,17 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 	        	} else if( e.keyCode == 40 ) {
 	        		var activeItem = $('#tagInvited-dropdown').find('a.active').removeClass('active');
 	       			activeItem = activeItem.length ? activeItem.closest('li').next('li') : $('#tagInvited-dropdown').find('li:first');
-	        		
+
 	        		while(activeItem.length && !activeItem.is(':visible') ) {
 	    				activeItem = activeItem.next('li');
 	    			}
 	    			activeItem.find('a').addClass('active');
 	    			//$('#tagInvited-dropdown').scrollTop(next.offset().top - 150);
 	        	}
-	        	
+
 	       		var email = e.target.value.trim().toLowerCase(),
 	       			existTags = [];
-	       		
+
 	       		$.each($('#tagInvited').tagsinput('items'), function (xxx, item) {
 	       			existTags.push(item.id);
 	       		});
@@ -375,12 +344,12 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 			if (this.files && this.files[0]) {
 				var reader = new FileReader();
 			 	var extension = this.files[0].name.split('.').pop().toLowerCase();
-             	var isSuccess = logoTypes.indexOf(extension) > -1; 
+             	var isSuccess = logoTypes.indexOf(extension) > -1;
              	 if (isSuccess) {
 					const size = (this.files[0].size / 1024 / 1024).toFixed(2);
 					if (size > 2) {
 						customTxt.innerHTML = "File must be less than 2MB";
-						realFileBtn.val(''); 
+						realFileBtn.val('');
 		            } else {
 	            	 	reader.onload = function(e) {
 		   	            	var name = realFileBtn.val().match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
@@ -391,51 +360,15 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 		            	reader.readAsDataURL(this.files[0]);
 		            }
 			  	}else {
-                  customTxt.innerHTML = "Choose a valid File"; 
-                  realFileBtn.val(''); 
+                  customTxt.innerHTML = "Choose a valid File";
+                  realFileBtn.val('');
 			  	}
 			} else {
 				customTxt.innerHTML = "No file chosen";
 			}
 		}
-	}); 
-	
-	function addEventAJAX() {
-		var xhr = new XMLHttpRequest();
-		var formData = new FormData();
-		var data = {
-			 <portlet:namespace />EventName: $("#<portlet:namespace/>EventName").val(),
-			 <portlet:namespace />Attendance: $("#<portlet:namespace/>Attendance").val(),
-			 <portlet:namespace />MeetingLink: $("#<portlet:namespace/>MeetingLink").val(),
-			 <portlet:namespace />EventType: $("#<portlet:namespace/>EventType").val(),
-			 <portlet:namespace />OtherLinks: $("#<portlet:namespace/>OtherLinks").val(),
-			 <portlet:namespace />StartDate: $("#<portlet:namespace/>StartDate").val(),
-			 <portlet:namespace />EndDate: $("#<portlet:namespace/>EndDate").val(),
-			 <portlet:namespace />Speakers: JSON.stringify($('#tagInvited').tagsinput('items')),//$("#<portlet:namespace/>Speakers").val(),
-			 <portlet:namespace />EventDescription: $("#EventDescription").summernote('code').replace(/<img[^>]*>/g,"")
-		};
-		var file = $("#<portlet:namespace/>EventImage")[0];
-		if( file && file.files.length ) {
-// 			formData.append('<portlet:namespace />EventImage', file.files[0]);
-			formData.append('<portlet:namespace />EventImage', base64String);
-			formData.append('<portlet:namespace />EventImageName', file.files[0].name);
-		}
-		
-		xhr.onloadend = function (e) {
-			window.location.href = location.origin +"/events?allEvents";
-		}
-		xhr.onprogress = function (e) {
-			if( e.lengthComputable ) {
-				var percentComplete = e.loaded / e.total * 100;
-				console.log('upload '+percentComplete+'%');
-			}
-		};
-		
-		xhr.open('POST', '${testAjaxResourceUrl}&'+$.param(data));
-		xhr.send(formData); 
-	}
-	
-	
+	});
+
 	var calendar;
 	document.addEventListener('DOMContentLoaded', function () {
 	  	var calendarEl = document.getElementById('calendar');
@@ -461,7 +394,7 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 		    nowIndicator: true,
 		    select: function (arg) {
 		    	if(${is_signed_in} && ${addEvent}) {
-		      		$("#addEventModal").modal("show");     
+		      		$("#addEventModal").modal("show");
 		    	}
 		    },
 		    eventClick: function (event, jsEvent, view) {
@@ -493,12 +426,12 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 	  $("#addEventModal").modal('hide');
 	  clearModal();
 	});
-	
+
 	$('#addEventButton').on('click', function (e) {
 	  e.preventDefault();
 	  addNewEvent();
 	});
-	
+
 	function clearModal() {
 		e.preventDefault();
 		$("form")[0].reset();
@@ -508,7 +441,7 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 		});
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
-	
+
 	function getFormattedDate(date) {
 	  var day = ('0' + date.getDate()).slice(-2);
 	  var month = ('0' + (date.getMonth() + 1)).slice(-2);
@@ -517,7 +450,7 @@ div.fc-daygrid-day-events>div.fc-daygrid-event-harness>a>b {
 	  var minutes = ('0' + date.getMinutes()).slice(-2);
 	  return year + '-' + month + '-' + day + 'T' + hour + ':' + minutes;
 	}
-	
+
 	function startDateChanged() {
 	  document.getElementById("<portlet:namespace/>EndDate").setAttribute("min", $('#<portlet:namespace/>StartDate').val());
 	}

@@ -52,7 +52,7 @@
 		</div>
 	</c:if>
 	<c:if test="${fn:length(eventsList) gt 0}">
-		<c:forEach var="event" items="${eventsList}"> 
+		<c:forEach var="event" items="${eventsList}">
 			<div class="cardCol col-xl-4 col-lg-6 col-md-6 mb-5">
 		        <div class="card cardEvent card-small">
 		            <div class="card-body">
@@ -61,28 +61,28 @@
 		                        <div class="">
 		                            <p class="card-subtitle">${event.startDateDisplay}</p>
 		                            <h5 class="card-title card-header-title-medium">${event.eventName}</h5>
-		                            <c:if  test="${event.AttendeesTotal gt 0 }">
-		                            	<c:forEach var="att" items="${event.Attendees}" begin="0" end="3" varStatus = "status"> 
+		                            <c:if  test="${event.attendeesTotal gt 0 }">
+		                            	<c:forEach var="att" items="${event.attendees}" begin="0" end="3" varStatus = "status">
 		                            		<img class="cardUserImg whiteBorder ${!status.first ? 'move-left' : ''}" src="${att.PortraitUrl}"
 			            						onerror="this.src='/o/energy-hub-theme/images/no-image.png'; this.onerror=null;"/>
 	                                   	</c:forEach>
-			                            <p class="card-text card-details-small"> ${event.AttendeesNames} 
-			                            	<c:if test="${event.AttendeesTotal gt 3 }">
-				                            	<liferay-ui:message key="and" /> ${event.AttendeesTotal} 
-				                            	<liferay-ui:message key="Others" /> ${event.AttendeesTotal} 
+			                            <p class="card-text card-details-small"> ${event.attendeesNames}
+			                            	<c:if test="${event.attendeesTotal gt 3 }">
+				                            	<liferay-ui:message key="and" /> ${event.attendeesNames}
+				                            	<liferay-ui:message key="Others" /> ${event.attendeesTotal}
 				                            	<liferay-ui:message key="AreGoing" />
 			                             	</c:if>
-			                             	<c:if test="${event.AttendeesTotal eq 1 }">
+			                             	<c:if test="${event.attendeesTotal eq 1 }">
 				                            	<liferay-ui:message key="IsGoing" />
 			                             	</c:if>
-			                             	<c:if test="${event.AttendeesTotal gt 1 }">
+			                             	<c:if test="${event.attendeesTotal gt 1 }">
 				                            	<liferay-ui:message key="AreGoing" />
 			                             	</c:if>
 			                            </p>
 		                            </c:if>
-		                            <c:if  test="${event.AttendeesTotal eq 0 }">
+		                            <c:if  test="${event.attendeesTotal eq 0 }">
 		                            	<p class="card-text card-details-small"><liferay-ui:message key="FirstToAttend" /></p>
-	                           	 	</c:if>	
+	                           	 	</c:if>
 		                        </div>
 		                        <div class="d-flex align-items-top">
 		                            <img class="card-img-top card-img" src="/o/energy-hub-theme/images/Illustration.png">
@@ -93,15 +93,15 @@
 		                    <div class="d-flex  justify-content-start align-items-center">
 		                        <img class="cardUserImg" src="/o/energy-hub-theme/images/img/user.jpg">
 		                        <div class="mx-2">
-		                            <div class="cardUserName d-flex">${event.HostName}</div>
+		                            <div class="cardUserName d-flex">${event.eventHostName}</div>
 		                            <div class="cardUserLive d-flex">
-			                            <c:if test="${event.isLive}">
+			                            <c:if test="${event.isLive()}">
 						          		  <span>. </span><liferay-ui:message key="Live" />
 						            	</c:if>
-						            	<c:if test="${event.isUpcoming}">
+						            	<c:if test="${event.isUpcoming()}">
 											<span>. </span><liferay-ui:message key="Upcoming" />
 						            	</c:if>
-						            	<c:if test="${event.ended}">
+						            	<c:if test="${event.isEnded()}">
 											<span>. </span><liferay-ui:message key="Ended" />
 						            	</c:if>
 		                            </div>
@@ -121,17 +121,17 @@
 				                                <table class="tbl">
 				                                    <tr class="bordered">
 				                                        <td>
-				                                            <label class="container"  onclick="ajaxCall('yes','${event.resourcePrimKey}')"><liferay-ui:message key="Yes" /></label>
+				                                            <label class="container"  onclick="ajaxCall('yes','${event.resourcePrimaryKey}')"><liferay-ui:message key="Yes" /></label>
 				                                        </td>
 				                                    </tr>
 				                                    <tr class="bordered">
 				                                        <td>
-				                                            <label class="container"  onclick="ajaxCall('maybe','${event.resourcePrimKey}')"><liferay-ui:message key="Maybe" /></label>
+				                                            <label class="container"  onclick="ajaxCall('maybe','${event.resourcePrimaryKey}')"><liferay-ui:message key="Maybe" /></label>
 				                                        </td>
-				                                    </tr> 
+				                                    </tr>
 				                                    <tr>
 				                                        <td>
-				                                            <label class="container" onclick="ajaxCall('no','${event.resourcePrimKey}')"><liferay-ui:message key="No" /></label>
+				                                            <label class="container" onclick="ajaxCall('no','${event.resourcePrimaryKey}')"><liferay-ui:message key="No" /></label>
 				                                        </td>
 				                                    </tr>
 				                                </table>
